@@ -1,5 +1,4 @@
 import itertools
-import math
 
 
 # problem 1 (solved)
@@ -191,7 +190,7 @@ def largest_product_in_a_series(series, length):
 # "71636269561882670428252483600823257530420752963450", 13)
 
 
-# problem 9
+# problem 9 (solved)
 def special_pythagorean_triplet(num):
     for i in range(num):
         for j in range(i, num):
@@ -204,7 +203,7 @@ def special_pythagorean_triplet(num):
 # special_pythagorean_triplet(1000)
 
 
-# problem 10
+# problem 10 (solved)
 def sum_of_all_primes(num):
     the_sum = 0
     for i in range(2, num - 1):
@@ -214,4 +213,4 @@ def sum_of_all_primes(num):
             the_sum += i
     print the_sum
 
-sum_of_all_primes(2000000)
+# sum_of_all_primes(2000000)
