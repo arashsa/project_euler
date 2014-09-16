@@ -121,11 +121,14 @@ def sum_square_difference(test_range):
 
 # problem 7 (solved)
 def is_prime(num):
-    if num < 1:
+    if num <= 3:
+        return num >= 2
+
+    if num % 2 == 0 or num % 3 == 0:
         return False
 
-    for i in range(3, num):
-        if num % i == 0:
+    for i in range(5, int(num ** 0.5) + 1, 6):
+        if num % i == 0 or num % (i + 2) == 0:
             return False
     return True
 
@@ -204,11 +207,11 @@ def special_pythagorean_triplet(num):
 # problem 10
 def sum_of_all_primes(num):
     the_sum = 0
-    for i in range(1, num):
-        current = find_prime(i)
-        if current > num:
-            return the_sum
-        # print current
-        the_sum += current
+    for i in range(2, num - 1):
+        current = is_prime(i)
+        if current:
+            # print i
+            the_sum += i
+    print the_sum
 
-print sum_of_all_primes(2000000)
+sum_of_all_primes(2000000)
